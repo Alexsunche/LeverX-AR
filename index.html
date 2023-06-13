@@ -16,9 +16,18 @@
             embedded
             gesture-detector
         >
-        <a-marker preset="hiro">
+            <a-marker
+                id="animated-marker"
+                type="pattern"
+                preset="custom"
+                url="assets/marker.patt"
+                raycaster="objects: .clickable"
+                emitevents="true"
+                cursor="fuse: false; rayOrigin: mouse;"
+                id="markerA"
+            >
                 <a-image
-                    src="assets/asset.jpg"
+                    src="assets/asset.jpeg"
                     scale="1 1 1"
                     class="clickable"
                     rotation="-90 0 0"

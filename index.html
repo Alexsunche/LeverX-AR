@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<script type="modul e" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 <head>
     <title>&lt;model-viewer&gt; example</title>
     <meta charset="utf-8">
@@ -38,19 +38,12 @@
 <body>
     <!-- <video></video> -->
     <div id="card">
-        <model-viewer src="./assets/panda.glb" ios-src="./assets/scene.gltf" alt="A 3D model of an astronaut"
-            shadow-intensity="1" camera-controls interaction-prompt="auto" auto-rotate ar magic-leap>
+        <model-viewer src="./assets/panda.glb"
+        camera-controls interaction-prompt="auto" auto-rotate ar magic-leap>
         </model-viewer>
 
 
     </div>
-
-    <script type="module" src="https://unpkg.com/@google/model-viewer@v0.9.0/dist/model-viewer.js">
-    </script>
-
-    <!-- Loads <model-viewer> for old browsers like IE11: -->
-    <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js">
-    </script>
 </body>
 
 </html>

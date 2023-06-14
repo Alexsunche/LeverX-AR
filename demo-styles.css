@@ -1,18 +1,19 @@
 body {
     margin: 0;
+    overflow: hidden;
 }
 
 #card {
-    margin: 0em auto;
+    margin: 3em auto;
     display: flex;
     flex-direction: column;
     /* width: 600px; */
-    max-width: 100vw;
+    max-width: 600px;
     overflow: hidden;
 }
 video {
-    width:100vw;
-    height:100vh;
+    width:100%;
+    height:400px;
     object-fit:cover;
     z-index:-1;
     position:absolute;
@@ -20,7 +21,7 @@ video {
 
 model-viewer {
     width: 100%;
-    height: 95vh;
+    height: 400px;
     
 }
 

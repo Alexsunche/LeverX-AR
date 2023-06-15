@@ -55,8 +55,10 @@
 // });
 
 window.addEventListener("load", () => {
-    var modelViewer = document.querySelector('model-viewer');
-    console.log(modelViewer)
-    console.log("Can activate AR: " + modelViewer.canActivateAR);
-    modelViewer.activateAR();
+    setTimeout(() => {
+        var modelViewer = document.querySelector('model-viewer');
+        console.log(modelViewer)
+        console.log("Can activate AR: " + modelViewer.canActivateAR);
+        modelViewer.activateAR();
+    }, 3000)
   });

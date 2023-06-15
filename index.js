@@ -60,5 +60,5 @@ window.addEventListener("load", () => {
         console.log(modelViewer)
         console.log("Can activate AR: " + modelViewer.canActivateAR);
         modelViewer.activateAR();
-    }, 3000)
+    }, 2000)
   });

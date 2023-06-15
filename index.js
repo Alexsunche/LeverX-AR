@@ -53,6 +53,10 @@
 //     false
 //   );
 // });
+function handleBtnClick () {
+    console.log('annotation was clicked')
+    alert('annotation clicked')
+}
 
 window.addEventListener("load", () => {
     setTimeout(() => {

@@ -38,8 +38,12 @@
 <body>
     <!-- <video></video> -->
     <div id="card">
-        <model-viewer src="./assets/panda.glb"
+        <model-viewer src="./assets/logo_horizontal.glb"
         camera-controls interaction-prompt="auto" auto-rotate ar magic-leap>
+
+        <button class="hotspot" slot="hotspot-hand" data-position="-0.54 0.93 0.1" data-normal="-0.73 0.05 0.69">
+            <div onclick="handleBtnClick()" class="annotation">Some Info there</div>
+          </button>
         </model-viewer>
 
 

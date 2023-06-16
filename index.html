@@ -39,7 +39,7 @@
     <!-- <video></video> -->
     <div id="card">
         <model-viewer src="./assets/logo_vert._fat.glb"
-        camera-controls auto-rotate ar ar_only>
+        camera-controls auto-rotate ar>
 
         <button slot="ar-button" id="ar-button">
             View in your space
@@ -83,7 +83,7 @@
             var arButton = document.querySelector('model-viewer button[slot="ar-button"]');
 
         // Trigger the click event on the AR button
-        arButton.click();
+        // arButton.click();
         }, 2000)
     });
       </script>

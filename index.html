@@ -38,8 +38,8 @@
 <body>
     <!-- <video></video> -->
     <div id="card">
-        <model-viewer src="./assets/logo_vert.glb"
-        camera-controls interaction-prompt="auto" auto-rotate ar>
+        <model-viewer src="./assets/logo_vert._fat.glb"
+        camera-controls interaction-prompt="auto" auto-rotate ar magic-leap>
 
         <div class="slider">
             <div class="slides">
@@ -58,6 +58,13 @@
     </div>
     <script type="module">
         const modelViewer = document.querySelector("model-viewer");
+
+        window.addEventListener("load", () => {
+    setTimeout(() => {
+        var firstBtn = document.querySelector('.selected');
+        firstBtn.click()
+    }, 2000)
+  });
       
         window.switchSrc = (element, name) => {
           const base = "./assets/" + name;

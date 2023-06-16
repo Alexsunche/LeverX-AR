@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.1.1/model-viewer.min.js"></script>
+<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.1.1/model-viewer.min.js"></script>
+
 <head>
     <title>&lt;model-viewer&gt; example</title>
     <meta charset="utf-8">
@@ -38,19 +39,24 @@
 <body>
     <!-- <video></video> -->
     <div id="card">
-        <model-viewer src="./assets/logo_vert._fat.glb"
-        camera-controls auto-rotate ar>
+        <model-viewer src="./assets/leverX.glb" camera-controls auto-rotate ar>
 
-        <div class="slider">
-            <div class="slides">
-              <button class="slide selected" onclick="switchSrc(this, 'logo_vert')" style="background-image: url('./assets/bg1.png');">
-        
-              </button><button class="slide" onclick="switchSrc(this, 'logo_horizontal')" style="background-image: url('./assets/marker.png');">
-        
-              </button><button class="slide" onclick="switchSrc(this, 'panda')" style="background-image: url('./assets/leverx.png');">
-              
-            </button></div>
-          </div>
+            <div class="slider">
+                <div class="slides">
+                    <button class="slide selected" onclick="switchSrc(this, 'leverX')"
+                        style="background-image: url('./assets/leverx.png');">
+                    </button>
+
+                    <button class="slide" onclick="switchSrc(this, 'data_lark')"
+                        style="background-image: url('./assets/data_lark.png');">
+                    </button>
+
+                    <button class="slide" onclick="switchSrc(this, 'emerline')"
+                        style="background-image: url('./assets/emerline.png');">
+                    </button>
+
+                </div>
+            </div>
 
         </model-viewer>
 
@@ -58,110 +64,109 @@
     <script type="module">
         const modelViewer = document.querySelector("model-viewer");
 
-      
-        window.switchSrc = (element, name) => {
-          const base = "./assets/" + name;
-          modelViewer.src = base + '.glb';
-          modelViewer.poster = base + '.webp';
-          const slides = document.querySelectorAll(".slide");
-          slides.forEach((element) => {element.classList.remove("selected");});
-          element.classList.add("selected");
-        };
-      
-        document.querySelector(".slider").addEventListener('beforexrselect', (ev) => {
-          // Keep slider interactions from affecting the XR scene.
-          ev.preventDefault();
-        });
-      </script>
 
-<style>
-    /* This keeps child nodes hidden while the element loads */
-    /* :not(:defined) > * {
+        window.switchSrc = (element, name) => {
+            const base = "./assets/" + name;
+            modelViewer.src = base + '.glb';
+            modelViewer.poster = base + '.webp';
+            const slides = document.querySelectorAll(".slide");
+            slides.forEach((element) => { element.classList.remove("selected"); });
+            element.classList.add("selected");
+        };
+
+        document.querySelector(".slider").addEventListener('beforexrselect', (ev) => {
+            // Keep slider interactions from affecting the XR scene.
+            ev.preventDefault();
+        });
+    </script>
+
+    <style>
+        /* This keeps child nodes hidden while the element loads */
+        /* :not(:defined) > * {
       display: none;
     } */
-  
-    model-viewer {
-      background-color: #eee;
-      overflow-x: hidden;
-    }
-  
-    #ar-button {
-      background-image: url(../../assets/ic_view_in_ar_new_googblue_48dp.png);
-      background-repeat: no-repeat;
-      background-size: 20px 20px;
-      background-position: 12px 50%;
-      background-color: #fff;
-      position: absolute;
-      right: -40px;
-      transform: translateX(-50%);
-      white-space: nowrap;
-      bottom: 5px;
-      padding: 0px 16px 0px 40px;
-      font-family: Roboto Regular, Helvetica Neue, sans-serif;
-      font-size: 14px;
-      color:#4285f4;
-      height: 36px;
-      line-height: 36px;
-      border-radius: 18px;
-      border: 1px solid #DADCE0;
-    }
-  
-    #ar-button:active {
-      background-color: #E8EAED;
-    }
-  
-    #ar-button:focus {
-      outline: none;
-    }
-  
-    #ar-button:focus-visible {
-      outline: 1px solid #4285f4;
-    }
-    
-    .slider {
-      /* width: 100%; */
-      text-align: center;
-      overflow: hidden;
-      position: absolute;
-      bottom: 16px;
-    }
-  
-    .slides {
-      display: flex;
-      overflow-x: auto;
-      scroll-snap-type: x mandatory;
-      scroll-behavior: smooth;
-      -webkit-overflow-scrolling: touch;
-    }
-  
-    .slide {
-      scroll-snap-align: start;
-      flex-shrink: 0;
-      width: 50px;
-      height: 50px;
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center;
-      background-color: #fff;
-      margin-right: 10px;
-      border-radius: 10px;
-      border: none;
-      display: flex;
-    }
-  
-    .slide.selected {
-      border: 2px solid #4285f4;
-    }
-  
-    .slide:focus {
-      outline: none;
-    }
-  
-    .slide:focus-visible {
-      outline: 1px solid #4285f4;
-    }
-  
-  </style>
+
+        model-viewer {
+            background-color: #eee;
+            overflow-x: hidden;
+        }
+
+        #ar-button {
+            background-image: url(../../assets/ic_view_in_ar_new_googblue_48dp.png);
+            background-repeat: no-repeat;
+            background-size: 20px 20px;
+            background-position: 12px 50%;
+            background-color: #fff;
+            position: absolute;
+            right: -40px;
+            transform: translateX(-50%);
+            white-space: nowrap;
+            bottom: 5px;
+            padding: 0px 16px 0px 40px;
+            font-family: Roboto Regular, Helvetica Neue, sans-serif;
+            font-size: 14px;
+            color: #4285f4;
+            height: 36px;
+            line-height: 36px;
+            border-radius: 18px;
+            border: 1px solid #DADCE0;
+        }
+
+        #ar-button:active {
+            background-color: #E8EAED;
+        }
+
+        #ar-button:focus {
+            outline: none;
+        }
+
+        #ar-button:focus-visible {
+            outline: 1px solid #4285f4;
+        }
+
+        .slider {
+            /* width: 100%; */
+            text-align: center;
+            overflow: hidden;
+            position: absolute;
+            bottom: 16px;
+        }
+
+        .slides {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .slide {
+            scroll-snap-align: start;
+            flex-shrink: 0;
+            width: 50px;
+            height: 50px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-color: #fff;
+            margin-right: 10px;
+            border-radius: 10px;
+            border: none;
+            display: flex;
+        }
+
+        .slide.selected {
+            border: 2px solid #4285f4;
+        }
+
+        .slide:focus {
+            outline: none;
+        }
+
+        .slide:focus-visible {
+            outline: 1px solid #4285f4;
+        }
+    </style>
 </body>
 
 </html>

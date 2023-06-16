@@ -78,13 +78,14 @@
         });
 
         window.addEventListener('load', function() {
-        // Find the AR button element using querySelector
-        setTimeout(()=> {
-            var arButton = document.querySelector('model-viewer button[slot="ar-button"]');
+        // Find the slide buttons within the slider
+        var slideButtons = document.querySelectorAll('.slider .slide');
 
-        // Trigger the click event on the AR button
-        arButton.click();
-        }, 2000)
+        // Get the first slide button and simulate a click event to select it
+        if (slideButtons.length > 0) {
+            var firstSlideButton = slideButtons[0];
+            firstSlideButton.click();
+        }
     });
       </script>
 

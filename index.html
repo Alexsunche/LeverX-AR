@@ -41,9 +41,9 @@
         <model-viewer src="./assets/logo_vert._fat.glb"
         camera-controls auto-rotate ar>
 
-        <button slot="ar-button" id="ar-button">
-            View in your space
-        </button>
+        <!-- <button slot="ar-button" id="ar-button">
+            View
+        </button> -->
 
         <div class="slider">
             <div class="slides">
@@ -83,7 +83,7 @@
             var arButton = document.querySelector('model-viewer button[slot="ar-button"]');
 
         // Trigger the click event on the AR button
-        // arButton.click();
+        arButton.click();
         }, 2000)
     });
       </script>
@@ -106,10 +106,10 @@
       background-position: 12px 50%;
       background-color: #fff;
       position: absolute;
-      right: -5px;
+      right: -40px;
       transform: translateX(-50%);
       white-space: nowrap;
-      bottom: 0px;
+      bottom: 5px;
       padding: 0px 16px 0px 40px;
       font-family: Roboto Regular, Helvetica Neue, sans-serif;
       font-size: 14px;

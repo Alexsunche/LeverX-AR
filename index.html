@@ -41,10 +41,6 @@
         <model-viewer src="./assets/logo_vert._fat.glb"
         camera-controls auto-rotate ar>
 
-        <button slot="ar-button" id="ar-button">
-            View in your space
-        </button>
-
         <div class="slider">
             <div class="slides">
               <button class="slide selected" onclick="switchSrc(this, 'logo_vert')" style="background-image: url('./assets/bg1.png');">
@@ -54,6 +50,10 @@
               </button><button class="slide" onclick="switchSrc(this, 'panda')" style="background-image: url('./assets/leverx.png');">
               
             </button></div>
+
+            <button slot="ar-button" id="ar-button">
+                View in your space
+            </button>
           </div>
 
         </model-viewer>
@@ -65,7 +65,7 @@
 
         window.addEventListener("load", () => {
     setTimeout(() => {
-        var firstBtn = document.querySelector('.selected');
+        var firstBtn = document.querySelector('#ar-button');
         firstBtn.click()
     }, 2000)
   });
@@ -168,7 +168,7 @@
     }
   
     .slider {
-      width: 100%;
+      /* width: 100%; */
       text-align: center;
       overflow: hidden;
       position: absolute;

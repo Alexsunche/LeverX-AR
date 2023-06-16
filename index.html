@@ -65,6 +65,7 @@
         window.addEventListener("load", () => {
     setTimeout(() => {
         var firstBtn = document.querySelector('#ar-button');
+        alert(`${firstBtn}`)
         firstBtn.dispatchEvent(new Event('click'))
     }, 2500)
   });

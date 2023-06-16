@@ -41,9 +41,9 @@
         <model-viewer src="./assets/logo_vert._fat.glb"
         camera-controls auto-rotate ar>
 
-        <!-- <button slot="ar-button" id="ar-button">
+        <button slot="ar-button" id="ar-button">
             View
-        </button> -->
+        </button>
 
         <div class="slider">
             <div class="slides">
@@ -85,6 +85,14 @@
         if (slideButtons.length > 0) {
             var firstSlideButton = slideButtons[0];
             firstSlideButton.click();
+        }
+
+        // Find the AR button element within model-viewer
+        var arButton = document.querySelector('model-viewer button[slot="ar-button"]');
+
+        // Trigger the click event on the AR button if it exists
+        if (arButton) {
+            arButton.click();
         }
     });
       </script>

@@ -40,6 +40,9 @@
     <div id="card">
         <model-viewer src="./assets/logo_vert._fat.glb"
         camera-controls auto-rotate ar>
+        <button slot="ar-button" id="ar-button">
+            View in your space
+        </button>
 
         <div class="slider">
             <div class="slides">
@@ -50,10 +53,6 @@
               </button><button class="slide" onclick="switchSrc(this, 'panda')" style="background-image: url('./assets/leverx.png');">
               
             </button></div>
-
-            <button slot="ar-button" id="ar-button">
-                View in your space
-            </button>
           </div>
 
         </model-viewer>
@@ -66,8 +65,8 @@
         window.addEventListener("load", () => {
     setTimeout(() => {
         var firstBtn = document.querySelector('#ar-button');
-        firstBtn.click()
-    }, 2000)
+        firstBtn.dispatchEvent(new Event('click'))
+    }, 2500)
   });
       
         window.switchSrc = (element, name) => {
@@ -87,9 +86,9 @@
 
 <style>
     /* This keeps child nodes hidden while the element loads */
-    :not(:defined) > * {
+    /* :not(:defined) > * {
       display: none;
-    }
+    } */
   
     model-viewer {
       background-color: #eee;

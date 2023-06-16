@@ -40,9 +40,6 @@
     <div id="card">
         <model-viewer src="./assets/logo_vert._fat.glb"
         camera-controls auto-rotate ar ar_only>
-        <button slot="ar-button" id="ar-button">
-            View in your space
-        </button>
 
         <div class="slider">
             <div class="slides">
@@ -57,7 +54,9 @@
 
         </model-viewer>
 
-
+        <button slot="ar-button" id="ar-button">
+            View in your space
+        </button>
     </div>
     <script type="module">
         const modelViewer = document.querySelector("model-viewer");

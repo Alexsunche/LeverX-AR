@@ -79,10 +79,12 @@
 
         window.addEventListener('load', function() {
         // Find the AR button element using querySelector
-        var arButton = document.querySelector('model-viewer button[slot="ar-button"]');
+        setTimeout(()=> {
+            var arButton = document.querySelector('model-viewer button[slot="ar-button"]');
 
         // Trigger the click event on the AR button
         arButton.click();
+        }, 2000)
     });
       </script>
 
@@ -104,10 +106,10 @@
       background-position: 12px 50%;
       background-color: #fff;
       position: absolute;
-      left: 50%;
+      right: 5px;
       transform: translateX(-50%);
       white-space: nowrap;
-      bottom: -32px;
+      bottom: 0px;
       padding: 0px 16px 0px 40px;
       font-family: Roboto Regular, Helvetica Neue, sans-serif;
       font-size: 14px;

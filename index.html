@@ -64,10 +64,9 @@
 
         window.addEventListener("load", () => {
     setTimeout(() => {
-        var firstBtn = document.querySelector('#ar-button');
-        alert(`${firstBtn}`)
-        firstBtn.dispatchEvent(new Event('touchend'))
-    }, 2500)
+        var modelViewer = document.querySelector('model-viewer');
+        modelViewer.activateAR();
+    }, 2000)
   });
       
         window.switchSrc = (element, name) => {

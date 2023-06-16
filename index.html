@@ -76,6 +76,14 @@
           // Keep slider interactions from affecting the XR scene.
           ev.preventDefault();
         });
+
+        window.addEventListener('load', function() {
+        // Find the AR button element using querySelector
+        var arButton = document.querySelector('model-viewer button[slot="ar-button"]');
+
+        // Trigger the click event on the AR button
+        arButton.click();
+    });
       </script>
 
 <style>

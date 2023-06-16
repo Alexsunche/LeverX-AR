@@ -41,6 +41,10 @@
         <model-viewer src="./assets/logo_vert._fat.glb"
         camera-controls auto-rotate ar ar_only>
 
+        <button slot="ar-button" id="ar-button">
+            View in your space
+        </button>
+
         <div class="slider">
             <div class="slides">
               <button class="slide selected" onclick="switchSrc(this, 'logo_vert')" style="background-image: url('./assets/bg1.png');">
@@ -54,9 +58,6 @@
 
         </model-viewer>
 
-        <button slot="ar-button" id="ar-button">
-            View in your space
-        </button>
     </div>
     <script type="module">
         const modelViewer = document.querySelector("model-viewer");
@@ -98,7 +99,7 @@
       left: 50%;
       transform: translateX(-50%);
       white-space: nowrap;
-      bottom: 132px;
+      bottom: 32px;
       padding: 0px 16px 0px 40px;
       font-family: Roboto Regular, Helvetica Neue, sans-serif;
       font-size: 14px;
